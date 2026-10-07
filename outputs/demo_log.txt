@@ -1,0 +1,43 @@
+Inserted 3456 SYNTHETIC rows (demo data, not real traffic)
+
+--- Lane share of total traffic (window SUM OVER) ---
+lane  total  pct_of_traffic
+   N   7075            36.8
+   S   5933            30.9
+   E   3700            19.3
+   W   2497            13.0
+
+--- Top-3 peak hours per lane (CTE + RANK OVER PARTITION) ---
+lane  hour  avg_count  rnk
+   E    18       9.86    1
+   E    17       8.78    2
+   E    19       7.22    3
+   N     9      17.36    1
+   N     8      16.36    2
+   N    10      12.86    3
+   S     9      14.31    1
+   S     8      12.89    2
+   S    10      10.17    3
+   W    18       6.58    1
+   W    17       6.36    2
+   W    19       4.86    3
+
+Mean density per lane (07:00-10:59): E=3.88, N=14.62, S=11.87, W=2.69
+Arrival rates (veh/h):   N=531, E=141, S=431, W=98
+
+Running Genetic Algorithm ...
+  gen   0  best=  62.75  mean= 271.37
+  gen   5  best=  54.95  mean=  63.53
+  gen  10  best=  54.00  mean=  58.82
+  gen  15  best=  54.00  mean=  57.74
+  gen  20  best=  53.57  mean=  58.74
+  gen  25  best=  53.00  mean=  57.78
+  gen  30  best=  52.94  mean=  56.88
+  gen  35  best=  52.94  mean=  57.33
+  gen  39  best=  52.94  mean=  59.39
+
+Results on 10 held-out traffic seeds
+Strategy      Greens N/E/S/W (s)         Delay (s)  Left in queue  vs Fixed
+Fixed timer   30/30/30/30                    197.4          114.5      0.0%
+Proportional  53/14/43/10                     60.2           22.9     69.5%
+GA optimised  46/16/42/12                     53.7           18.8     72.8%

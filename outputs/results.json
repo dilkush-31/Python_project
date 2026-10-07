@@ -1,0 +1,78 @@
+{
+  "density": {
+    "E": 3.875,
+    "N": 14.625,
+    "S": 11.868055555555555,
+    "W": 2.6875
+  },
+  "rates_veh_per_hour": {
+    "N": 530.9243697478992,
+    "E": 140.67226890756302,
+    "S": 430.84033613445376,
+    "W": 97.56302521008404
+  },
+  "ga_config": {
+    "pop_size": 40,
+    "generations": 40,
+    "elite": 2,
+    "tournament_k": 3,
+    "crossover_alpha": 0.3,
+    "mutation_rate": 0.3,
+    "mutation_sigma": 4.0,
+    "g_min": 8.0,
+    "g_max": 60.0,
+    "train_seeds": [
+      100,
+      101,
+      102
+    ],
+    "seed": 42
+  },
+  "results": {
+    "Fixed timer": {
+      "avg_delay_s": 197.42602701349196,
+      "throughput": 479.1,
+      "arrived": 593.6,
+      "left_in_queue": 114.5,
+      "max_queue": 81.5,
+      "cycle_s": 136.0,
+      "greens": [
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ],
+      "improvement_vs_fixed_pct": 0.0
+    },
+    "Proportional": {
+      "avg_delay_s": 60.23466247164955,
+      "throughput": 570.7,
+      "arrived": 593.6,
+      "left_in_queue": 22.9,
+      "max_queue": 20.8,
+      "cycle_s": 136.0,
+      "greens": [
+        53.1,
+        14.1,
+        43.1,
+        9.8
+      ],
+      "improvement_vs_fixed_pct": 69.5
+    },
+    "GA optimised": {
+      "avg_delay_s": 53.692814207086016,
+      "throughput": 574.8,
+      "arrived": 593.6,
+      "left_in_queue": 18.8,
+      "max_queue": 21.3,
+      "cycle_s": 132.0,
+      "greens": [
+        45.8,
+        15.7,
+        41.6,
+        12.3
+      ],
+      "improvement_vs_fixed_pct": 72.8
+    }
+  }
+}
